@@ -24,7 +24,8 @@ const lang = {
 let initData = {
   name: '',
   type: '',
-  platform: ''
+  platform: '',
+  yylVersion: '3.8.0'
 }
 
 const config = {
@@ -54,8 +55,8 @@ const config = {
       }
       // - name
 
+      // + platform
       const platforms = ['pc', 'mobile']
-
       if (env && env.platform && ~platforms.indexOf(env.platform)) {
         initData.platform = env.platform
       } else {
@@ -67,6 +68,13 @@ const config = {
           choices: platforms
         })
       }
+      // - platform
+
+      // + yylVersion
+      if (env && env.yylVersion) {
+        initData.yylVersion = env.yylVersion
+      }
+      // - yylVersion
 
       // + type
       const types = fs.readdirSync(SEED_PATH).filter((iPath) => {

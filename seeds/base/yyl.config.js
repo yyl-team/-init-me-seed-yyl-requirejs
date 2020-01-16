@@ -5,7 +5,7 @@ const path = require('path');
 const PROJECT_NAME = '__data("name")';
 const WORKFLOW = 'gulp-requirejs';
 const PLATFORM = '__data("platform")';
-const VERSION = '3.7.2';
+const VERSION = '__data("yylVersion")';
 const SRC_ROOT = './src';
 const COMMON_PATH = '../commons';
 // - vars
