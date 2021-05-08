@@ -30,13 +30,13 @@ const setting = {
   proxy: {
     port: 8887,
     localRemote: {
-      'http://web.yy.com/': 'http://127.0.0.1:5000/'
+      'http://web.testhost.com/': 'http://127.0.0.1:5000/'
     },
-    homePage: `http://web.yy.com/${PROJECT_NAME}/`
+    homePage: `http://web.testhost.com/${PROJECT_NAME}/`
   }
 };
 
-setting.proxy.localRemote[`http://web.yy.com/${PROJECT_NAME}`] = `http://127.0.0.1:5000/project/${PROJECT_NAME}/${PLATFORM}/html`;
+setting.proxy.localRemote[`http://web.testhost.com/${PROJECT_NAME}`] = `http://127.0.0.1:5000/project/${PROJECT_NAME}/${PLATFORM}/html`;
 
 // - setting
 
@@ -89,7 +89,7 @@ const config = {
     revAddr: `http://web.yystatic.com${setting.dest.basePath}/${setting.dest.revPath}/rev-manifest.json`,
     hostname: '//web.yystatic.com',
     staticHost: '//web.yystatic.com',
-    mainHost: '//www.yy.com/web'
+    mainHost: '//www.testhost.com/web'
   }
   // - configCommit
 };
